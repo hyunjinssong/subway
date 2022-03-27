@@ -57,7 +57,8 @@ view: cardsubway_test {
     drill_fields: []
   }
 
-  measure: total_in {
+  measure: total_in_passengers {
+    label: "총 승차인원 수"
     type: number
     sql: sum(${TABLE}.`In`) ;;
   }
