@@ -57,8 +57,8 @@ view: cardsubway_test {
     drill_fields: []
   }
 
-  measure: total_in {
+  measure: sum {
     type: sum
-    sql: ${TABLE}.`In` ;;
+    drill_fields: []
   }
 }
