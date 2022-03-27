@@ -63,5 +63,9 @@ view: cardsubway_test {
     sql: sum(${TABLE}.`In`) ;;
   }
 
+  measure: total{
+    type: sum
+    sql:${TABLE}.`In` ;;
+  }
 
 }
