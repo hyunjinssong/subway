@@ -78,7 +78,7 @@ view: cardsubway_test {
   measure: totalpassengers {
     label: "순수송인원 수"
     type: number
-    sql: Abs(${TABLE}.`In` - ${TABLE}.Out) ;;
+    sql: abs(${TABLE}.`In` - ${TABLE}.Out) ;;
   }
 
 
