@@ -71,7 +71,7 @@ view: cardsubway_test {
 
   measure: total_passengers {
     label: "유동인원수"
-    type: number
+    type: sum
     sql: ${TABLE}.Out + ${TABLE}.`In` ;;
   }
 
