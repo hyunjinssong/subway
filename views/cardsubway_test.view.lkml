@@ -63,9 +63,24 @@ view: cardsubway_test {
     sql: sum(${TABLE}.`In`) ;;
   }
 
-  measure: total{
-    type: sum
-    sql:${TABLE}.`In` ;;
+  measure: total_out_passengers {
+    label: "총 하차인원 수"
+    type: number
+    sql: sum(${TABLE}.Out) ;;
   }
+
+  measure: total_passengers {
+    label: "유동인원수"
+    type: number
+    sql: ${TABLE}.Out + ${TABLE}.`In` ;;
+  }
+
+  measure: totalpassengers {
+    label: "순수송인원 수"
+    type: number
+    sql: Abs(${TABLE}.`In` - ${TABLE}.Out) ;;
+  }
+
+
 
 }
